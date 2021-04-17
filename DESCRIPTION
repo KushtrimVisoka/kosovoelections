@@ -1,0 +1,22 @@
+Package: kosovoelections
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.1
+Authors@R: 
+    person(given = "Kushtrim",
+           family = "Visoka",
+           role = c("aut", "cre"),
+           email = "kushtrim.visoka@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This package allows access to the results and statistics of the national and local elections held since 2010 in the Republic of Kosovo.
+License: MIT + file LICENSE
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: stringr, rlang, dplyr, magrittr
+NeedsCompilation: no
+Packaged: 2021-04-17 16:46:25 UTC; kushtrimvisoka
+Author: Kushtrim Visoka [aut, cre] (YOUR-ORCID-ID)
+Maintainer: Kushtrim Visoka <kushtrim.visoka@gmail.com>
