@@ -17,6 +17,6 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: stringr, rlang, dplyr, magrittr
 NeedsCompilation: no
-Packaged: 2021-04-17 17:48:06 UTC; kushtrimvisoka
+Packaged: 2021-04-18 22:11:12 UTC; kushtrimvisoka
 Author: Kushtrim Visoka [aut, cre] (YOUR-ORCID-ID)
 Maintainer: Kushtrim Visoka <kushtrim.visoka@gmail.com>

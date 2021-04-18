@@ -106,7 +106,7 @@ By level: national
 
 | Type of elections    | 2021 | 2019 | 2017 | 2014 | 2013 | 2010 |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|
-| National Assembly    | Yes  | Yes  | Yes  | Yes  | Yes  | Yes  |
+| National Assembly    | Yes  | Yes  | Yes  | Yes  | Yes  | No   |
 | Local Assembly       | –    | –    | Yes  | –    | Yes  | –    |
 | Mayor - First Round  | –    | –    | Yes  | –    | Yes  | –    |
 | Mayor - Second Round | –    | –    | Yes  | –    | Yes  | –    |
@@ -115,7 +115,7 @@ By level: municipality
 
 | Type of elections    | 2021 | 2019 | 2017 | 2014 | 2013 | 2010 |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|
-| National Assembly    | Yes  | Yes  | Yes  | Yes  | Yes  | Yes  |
+| National Assembly    | Yes  | Yes  | Yes  | Yes  | Yes  | No   |
 | Local Assembly       | –    | –    | Yes  | –    | Yes  | –    |
 | Mayor - First Round  | –    | –    | Yes  | –    | Yes  | –    |
 | Mayor - Second Round | –    | –    | Yes  | –    | Yes  | –    |

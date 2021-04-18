@@ -17,7 +17,7 @@ get_election_results <- function(type = c("national", "local", "mayor", "mayor2"
     stop("'type = ' must have one of the following elements: 'national', 'local', 'mayor', 'mayor2'.")
   }
   if (missing(year)){
-    stop("'year = ' must have one of the following elements: '2021', '2019', '2017', '2014'.")
+    stop("'year = ' must have one of the following elements: '2021', '2019', '2017', '2014', '2013'.")
   }
   if (missing(by)){
     stop("'by = ' must have one of the following elements: 'party', 'candidate'.")
