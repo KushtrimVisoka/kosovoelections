@@ -3,8 +3,7 @@
 
 # `kosovoelections` <img src='man/figures/logo.png' align="right" height="138" style="padding: 0 15px; float: right;"/>
 
-This package enables the download of Kosovo national and local elections
-data. Soon, the package will include statistics for all elections.
+An unofficial package with election results
 
 ### Installation
 
@@ -34,7 +33,7 @@ data <- get_election_results(type = "national", # "local" (for local assembly), 
 
 ``` r
 summary(data)
-#>    PartyID             Party             Acronym           Candidate        
+#>    Party_ID            Party             Acronym           Candidate        
 #>  Length:1052        Length:1052        Length:1052        Length:1052       
 #>  Class :character   Class :character   Class :character   Class :character  
 #>  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
@@ -69,7 +68,7 @@ data <- get_election_results(type = "national", # "local" (for local assembly), 
                              )
 
 data <- data %>% 
-  filter(Candidate == "VJOSA OSMANI-SADRIU") %>% 
+  filter(Candidate == "VJOSA OSMANI") %>% 
   group_by(id, Municipality, Candidate) %>% 
   summarise(Votes = sum(Votes))
 
@@ -96,9 +95,17 @@ print(p)
 Source: Central Election Commission of Kosovo
 (<https://www.kqz-ks.org>).
 
-Data processing is done in R, using different packages. In cases where
-XLSX files were not accessible, PDF files were used and processed using
-the {pdftools} package.
+The data were taken from the CEC website and processed in R using
+different packages. In cases where XLSX files were not accessible, PDF
+files were used and processed using the {pdftools} package.
+
+Disclaimer: This package does not have any connection with the CEC or
+other public institutions in Kosovo. I do not claim or guarantee the
+accuracy of the data in this package. I disclaim any responsibility or
+liability for errors and omissions.
+
+For the official and certified election results, please refer to the CEC
+website.
 
 ### Data availability
 
@@ -148,7 +155,7 @@ By level: polling station
 | `Polling Station` | Unique ID for each Polling Station. |
 | `Candidate`       | Name of candidate.                  |
 | `Gender`          | Gender of the candidate.            |
-| `PartyID`         | Unique ID for each political party. |
+| `Party_ID`        | Unique ID for each political party. |
 | `Party`           | Full name of political party.       |
 | `Acronym`         | Acronym of political party.         |
 | `Votes`           | Number of votes.                    |

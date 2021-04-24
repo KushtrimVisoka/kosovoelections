@@ -26,3 +26,7 @@ get_election_results(
 \description{
 Get elections data for Kosovo
 }
+\examples{
+
+data <- get_election_results(type = "national", year = 2021, by = "candidate", level = "municipality")
+}

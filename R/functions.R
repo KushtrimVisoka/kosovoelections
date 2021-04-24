@@ -9,6 +9,8 @@
 #' @export
 #'
 #' @examples
+#'
+#' data <- get_election_results(type = "national", year = 2021, by = "candidate", level = "municipality")
 get_election_results <- function(type = c("national", "local", "mayor", "mayor2"),
                                  year = NULL,
                                  by = c("party", "candidate"),
