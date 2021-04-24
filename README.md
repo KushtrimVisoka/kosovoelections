@@ -3,6 +3,12 @@
 
 # `kosovoelections` <img src='man/figures/logo.png' align="right" height="138" style="padding: 0 15px; float: right;"/>
 
+[![](https://img.shields.io/badge/devel%20version-0.0.1-green.svg)](https://github.com/Kushtrimvisoka/kosovoelections)
+[![](https://img.shields.io/github/languages/code-size/Kushtrimvisoka/kosovoelections.svg)](https://github.com/Kushtrimvisoka/kosovoelections)
+[![](https://travis-ci.org/rstudio/rmarkdown.svg?branch=master)](https://travis-ci.org/rstudio/rmarkdown)
+[![License:
+MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.org/web/licenses/MIT)
+
 An unofficial package with election results
 
 ### Installation
@@ -88,7 +94,7 @@ Plot example
 print(p)
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
 ### Data
 
