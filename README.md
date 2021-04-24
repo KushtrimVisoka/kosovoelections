@@ -101,9 +101,8 @@ print(p)
 Source: Central Election Commission of Kosovo
 (<https://www.kqz-ks.org>).
 
-The data were taken from the CEC website and processed in R using
-different packages. In cases where XLSX files were not accessible, PDF
-files were used and processed using the {pdftools} package.
+The data in this package are taken from the CEC website and processed in
+R using various packages for processing Excel and PDF files.
 
 Disclaimer: This package does not have any connection with the CEC or
 other public institutions in Kosovo. I do not claim or guarantee the
