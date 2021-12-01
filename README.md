@@ -3,8 +3,6 @@
 
 # `kosovoelections` <img src='man/figures/logo.png' align="right" height="138" style="padding: 0 15px; float: right;"/>
 
-    ## ✓ Setting active project to '/Users/kushtrimvisoka/My Packages/kosovoelections'
-
 [![](https://img.shields.io/badge/devel%20version-0.0.1-green.svg)](https://github.com/Kushtrimvisoka/kosovoelections)
 [![](https://img.shields.io/github/languages/code-size/Kushtrimvisoka/kosovoelections.svg)](https://github.com/Kushtrimvisoka/kosovoelections)
 [![](https://travis-ci.org/rstudio/rmarkdown.svg?branch=main)](https://travis-ci.org/rstudio/rmarkdown)
