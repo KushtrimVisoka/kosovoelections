@@ -28,7 +28,7 @@ get_election_results <- function(type = c("national", "local", "mayor", "mayor2"
     stop("'level = ' must have one of the following elements: 'national', 'municipality', 'pc', 'ps'.")
   }
   linku <- stringr::str_glue("https://github.com/Kushtrimvisoka/datasets/blob/main/elections/{type}/{year}/{by}/{level}.RData?raw=true")
-  rlang::inform(stringr::str_glue("Downloading data for {year} {type} assembly elections, by {by}, at {level} level..."))
+  rlang::inform(stringr::str_glue("Downloading data for {year} {type}, by {by}, at {level} level..."))
   load(url(linku))
   return(data)
 }
