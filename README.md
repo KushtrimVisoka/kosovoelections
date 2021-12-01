@@ -36,7 +36,7 @@ data <- get_election_results(type = "national", # "local" (for local assembly), 
                              )
 ```
 
-    ## Downloading data for 2021 national, by candidate, at national level...
+    ## Downloading data for 2021 national assembly elections, by candidate, at national level...
 
 ``` r
 summary(data)
@@ -76,7 +76,7 @@ data <- get_election_results(type = "national", # "local" (for local assembly), 
                              )
 
 data <- data %>% 
-  filter(Candidate == "VJOSA OSMANI") %>% 
+  filter(Candidate == "VJOSA OSMANI-SADRIU") %>% 
   group_by(id, Municipality, Candidate) %>% 
   summarise(Votes = sum(Votes))
 
