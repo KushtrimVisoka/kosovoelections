@@ -3,9 +3,11 @@
 
 # `kosovoelections` <img src='man/figures/logo.png' align="right" height="138" style="padding: 0 15px; float: right;"/>
 
+    ## ✓ Setting active project to '/Users/kushtrimvisoka/My Packages/kosovoelections'
+
 [![](https://img.shields.io/badge/devel%20version-0.0.1-green.svg)](https://github.com/Kushtrimvisoka/kosovoelections)
 [![](https://img.shields.io/github/languages/code-size/Kushtrimvisoka/kosovoelections.svg)](https://github.com/Kushtrimvisoka/kosovoelections)
-[![](https://travis-ci.org/rstudio/rmarkdown.svg?branch=master)](https://travis-ci.org/rstudio/rmarkdown)
+[![](https://travis-ci.org/rstudio/rmarkdown.svg?branch=main)](https://travis-ci.org/rstudio/rmarkdown)
 [![License:
 MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.org/web/licenses/MIT)
 
@@ -34,26 +36,28 @@ data <- get_election_results(type = "national", # "local" (for local assembly), 
                              by = "candidate", # or "party".
                              level = "national" # "municipality", or "pc" (Polling Center), or "ps" (Polling Station).
                              )
-#> Downloading data for 2021 national assembly elections, by candidate, at national level...
 ```
+
+    ## Downloading data for 2021 national, by candidate, at national level...
 
 ``` r
 summary(data)
-#>    Party_ID            Party             Acronym           Candidate        
-#>  Length:1052        Length:1052        Length:1052        Length:1052       
-#>  Class :character   Class :character   Class :character   Class :character  
-#>  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-#>                                                                             
-#>                                                                             
-#>                                                                             
-#>     Gender              Votes         
-#>  Length:1052        Min.   :     2.0  
-#>  Class :character   1st Qu.:   127.8  
-#>  Mode  :character   Median :   528.0  
-#>                     Mean   :  3515.8  
-#>                     3rd Qu.:  3293.5  
-#>                     Max.   :300756.0
 ```
+
+    ##   Candidate            Gender            Party_ID            Party          
+    ##  Length:1052        Length:1052        Length:1052        Length:1052       
+    ##  Class :character   Class :character   Class :character   Class :character  
+    ##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+    ##                                                                             
+    ##                                                                             
+    ##                                                                             
+    ##    Acronym              Votes         
+    ##  Length:1052        Min.   :     2.0  
+    ##  Class :character   1st Qu.:   127.8  
+    ##  Mode  :character   Median :   528.0  
+    ##                     Mean   :  3515.8  
+    ##                     3rd Qu.:  3293.5  
+    ##                     Max.   :300756.0
 
 **Plot a simple map**
 
@@ -94,7 +98,7 @@ Plot example
 print(p)
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ### Data
 
@@ -116,39 +120,39 @@ website.
 
 By level: national
 
-| Type of elections    | 2021 | 2019 | 2017 | 2014 | 2013 | 2010 |
+| Type of elections    | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|
-| National Assembly    | Yes  | Yes  | Yes  | Yes  | Yes  | No   |
-| Local Assembly       | –    | –    | Yes  | –    | Yes  | –    |
-| Mayor - First Round  | –    | –    | Yes  | –    | Yes  | –    |
-| Mayor - Second Round | –    | –    | Yes  | –    | Yes  | –    |
+| National Assembly    | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
+| Local Assembly       | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | Yes  |
 
 By level: municipality
 
-| Type of elections    | 2021 | 2019 | 2017 | 2014 | 2013 | 2010 |
+| Type of elections    | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|
-| National Assembly    | Yes  | Yes  | Yes  | Yes  | Yes  | No   |
-| Local Assembly       | –    | –    | Yes  | –    | Yes  | –    |
-| Mayor - First Round  | –    | –    | Yes  | –    | Yes  | –    |
-| Mayor - Second Round | –    | –    | Yes  | –    | Yes  | –    |
+| National Assembly    | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
+| Local Assembly       | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | Yes  |
 
 By level: polling center
 
-| Type of elections    | 2021 | 2019 | 2017 | 2014 | 2013 | 2010 |
+| Type of elections    | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|
-| National Assembly    | Yes  | Yes  | Yes  | Yes  | Yes  | No   |
-| Local Assembly       | –    | –    | Yes  | –    | Yes  | –    |
-| Mayor - First Round  | –    | –    | Yes  | –    | Yes  | –    |
-| Mayor - Second Round | –    | –    | Yes  | –    | Yes  | –    |
+| National Assembly    | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
+| Local Assembly       | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | Yes  |
 
 By level: polling station
 
-| Type of elections    | 2021 | 2019 | 2017 | 2014 | 2013 | 2010 |
+| Type of elections    | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|
-| National Assembly    | Yes  | Yes  | Yes  | Yes  | Yes  | No   |
-| Local Assembly       | –    | –    | Yes  | –    | Yes  | –    |
-| Mayor - First Round  | –    | –    | Yes  | –    | Yes  | –    |
-| Mayor - Second Round | –    | –    | Yes  | –    | Yes  | –    |
+| National Assembly    | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
+| Local Assembly       | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | Yes  |
 
 ### Codebook
 

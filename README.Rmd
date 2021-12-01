@@ -1,0 +1,159 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# `kosovoelections` <img src='man/figures/logo.png' align="right" height="138" style="padding: 0 15px; float: right;"/>
+
+```{r, echo = FALSE, results='asis'}
+cat(
+  badger::badge_github_version("Kushtrimvisoka/kosovoelections", "green"), 
+	badger::badge_code_size("Kushtrimvisoka/kosovoelections"),
+	badger::badge_travis("rstudio/rmarkdown"),
+	badger::badge_license(color = "blue")
+)
+```
+
+
+An unofficial package with election results
+
+### Installation
+
+``` r
+# install.packages("devtools")
+devtools::install_github("Kushtrimvisoka/kosovoelections")
+```
+
+### Example
+
+**Load {kosovoelections} package...**
+
+```{r example}
+library(kosovoelections)
+```
+
+
+**Download Election Results**
+
+
+```{r CandNatLevel}
+data <- get_election_results(type = "national", # "local" (for local assembly), or "mayor", or "mayor2" (for runoffs).
+                             year = 2021,
+                             by = "candidate", # or "party".
+                             level = "national" # "municipality", or "pc" (Polling Center), or "ps" (Polling Station).
+                             )
+```
+
+```{r data}
+summary(data)
+```
+
+
+**Plot a simple map**
+
+```{r, message=FALSE, warning=FALSE}
+
+# install.packages("devtools")
+# devtools::install_github("Kushtrimvisoka/kosovomaps")
+library(kosovoelections)
+library(kosovomaps)
+library(tidyverse)
+library(sf)
+
+map <- mapof(x = "municip")
+
+data <- get_election_results(type = "national", # "local" (for local assembly), or "mayor", or "mayor2" (for runoffs).
+                             year = 2021,
+                             by = "candidate", # or "party".
+                             level = "municipality" # "national", or "pc" (Polling Center), or "ps" (Polling Station).
+                             )
+
+data <- data %>% 
+  filter(Candidate == "VJOSA OSMANI") %>% 
+  group_by(id, Municipality, Candidate) %>% 
+  summarise(Votes = sum(Votes))
+
+data <- merge(map, data)
+
+p <- ggplot(data = data)+
+  geom_sf(aes(fill = Votes)) +
+  scale_fill_viridis_c("Votes", direction = -1, option = "E") +
+  labs(title = "Votes cast for Vjosa Osmani-Sadriu", 
+       caption = "Source: CEC")+
+  theme_void()
+
+```
+
+Plot example
+
+```{r dpi = 400}
+print(p)
+```
+
+### Data
+
+Source: Central Election Commission of Kosovo (https://www.kqz-ks.org).
+
+The data in this package are taken from the CEC website and processed in R using various packages for processing Excel and PDF files.
+
+Disclaimer: This package does not have any connection with the CEC or other public institutions in Kosovo. I do not claim or guarantee the accuracy of the data in this package. I disclaim any responsibility or liability for errors and omissions. 
+
+For the official and certified election results, please refer to the CEC website. 
+
+### Data availability
+
+By level: national
+
+| Type of elections     | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
+| :---                  | :--- | :--- | :--- | :--- | :--- | :--- |
+| National Assembly     | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
+| Local Assembly        | --   | Yes  | --   | Yes  | --   | Yes  |
+| Mayor - First Round   | --   | Yes  | --   | Yes  | --   | Yes  |
+| Mayor - Second Round  | --   | Yes  | --   | Yes  | --   | Yes  |
+
+By level: municipality
+
+| Type of elections     | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
+| :---                  | :--- | :--- | :--- | :--- | :--- | :--- |
+| National Assembly     | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
+| Local Assembly        | --   | Yes  | --   | Yes  | --   | Yes  |
+| Mayor - First Round   | --   | Yes  | --   | Yes  | --   | Yes  |
+| Mayor - Second Round  | --   | Yes  | --   | Yes  | --   | Yes  |
+
+By level: polling center
+
+| Type of elections     | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
+| :---                  | :--- | :--- | :--- | :--- | :--- | :--- |
+| National Assembly     | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
+| Local Assembly        | --   | Yes  | --   | Yes  | --   | Yes  |
+| Mayor - First Round   | --   | Yes  | --   | Yes  | --   | Yes  |
+| Mayor - Second Round  | --   | Yes  | --   | Yes  | --   | Yes  |
+
+By level: polling station
+
+| Type of elections     | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
+| :---                  | :--- | :--- | :--- | :--- | :--- | :--- |
+| National Assembly     | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
+| Local Assembly        | --   | Yes  | --   | Yes  | --   | Yes  |
+| Mayor - First Round   | --   | Yes  | --   | Yes  | --   | Yes  |
+| Mayor - Second Round  | --   | Yes  | --   | Yes  | --   | Yes  |
+
+### Codebook
+
+| Variable Name | Description |
+| ---          | ---       |
+| `id`          | Unique ID for each Municipality. |
+| `Municipality`          | Name of Municipality (in Albanian). |
+| `Polling Center`          | Unique ID for each Polling Center. |
+| `Polling Station`          | Unique ID for each Polling Station. |
+| `Candidate`          | Name of candidate. |
+| `Gender`          | Gender of the candidate. |
+| `Party_ID`          | Unique ID for each political party. |
+| `Party`          | Full name of political party. |
+| `Acronym`          | Acronym of political party. |
+| `Votes`          | Number of votes. |
+
+### License
+
+This package is released under the MIT License. For more, see "License".
