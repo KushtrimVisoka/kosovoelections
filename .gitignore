@@ -4,3 +4,5 @@
 .Rbuildignore
 .Rhistory
 kosovoelections.Rproj
+.Rdata
+.httr-oauth
