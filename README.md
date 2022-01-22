@@ -121,36 +121,36 @@ By level: national
 | Type of elections    | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|
 | National Assembly    | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
-| Local Assembly       | –    | Yes  | –    | Yes  | –    | –    |
-| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | –    |
-| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | –    |
+| Local Assembly       | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | Yes  |
 
 By level: municipality
 
 | Type of elections    | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|
 | National Assembly    | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
-| Local Assembly       | –    | Yes  | –    | Yes  | –    | –    |
-| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | –    |
-| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | –    |
+| Local Assembly       | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | Yes  |
 
 By level: polling center
 
 | Type of elections    | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|
 | National Assembly    | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
-| Local Assembly       | –    | Yes  | –    | Yes  | –    | –    |
-| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | –    |
-| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | –    |
+| Local Assembly       | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | Yes  |
 
 By level: polling station
 
 | Type of elections    | 2010 | 2013 | 2014 | 2017 | 2019 | 2021 |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|
 | National Assembly    | No   | Yes  | Yes  | Yes  | Yes  | Yes  |
-| Local Assembly       | –    | Yes  | –    | Yes  | –    | –    |
-| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | –    |
-| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | –    |
+| Local Assembly       | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - First Round  | –    | Yes  | –    | Yes  | –    | Yes  |
+| Mayor - Second Round | –    | Yes  | –    | Yes  | –    | Yes  |
 
 ### Codebook
 
